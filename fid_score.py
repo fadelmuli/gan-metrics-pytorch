@@ -258,7 +258,7 @@ def calculate_fid_given_paths(paths, batch_size, cuda, dims, bootstrap=True, n_b
         model = InceptionV3([block_idx])
     elif model_type == 'lenet':
         model = LeNet5()
-        model.load_state_dict(torch.load('./models/lenet.pth'))
+        model.load_state_dict(torch.load('gan-metric-pytorch/models/lenet.pth'))
     if cuda:
        model.cuda()
 
